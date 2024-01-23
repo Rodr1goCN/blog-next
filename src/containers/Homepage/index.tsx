@@ -14,7 +14,10 @@ export default function HomePage({ posts }: HomePageProps) {
             <MainContainer>
                 <Container>
                     {posts.map((post) => (
-                        <h2 key={post.attributes.slug}>
+                        <h2
+                            style={{ background: 'red' }}
+                            key={post.attributes.slug}
+                        >
                             {post.attributes.title}
                         </h2>
                     ))}
