@@ -15,6 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%; /* Para poder usar o REM, então 1.5rem é igual 15px */
+    font-size: 62.5%; /* Para poder usar o REM, então 1.5rem é igual 15px (15pixels)*/
   }
 `;
