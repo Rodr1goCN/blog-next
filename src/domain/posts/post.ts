@@ -16,22 +16,24 @@ type PostCoverFormat = {
     };
 };
 
-type PostCoverAttributes = PostCoverFormat & {
+type PostCoverAttributes = {
     alternativeText: string;
     caption: string;
+    previewUrl: null;
+    provider: string;
+    created_by: number;
+    updated_by: number;
+    created_at: string;
+    updated_at: string;
     formats: {
         thumbnail: PostCoverFormat;
         small: PostCoverFormat;
         medium: PostCoverFormat;
         large: PostCoverFormat;
     };
-    previewUrl: null;
-    provider: string;
-    createdAt: string;
-    updatedAt: string;
 };
 
-type PostCover = {
+export type PostCover = {
     data: {
         id: PostID;
         attributes: PostCoverAttributes;

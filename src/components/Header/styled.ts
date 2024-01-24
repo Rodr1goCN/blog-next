@@ -10,5 +10,11 @@ export const Container = styled.header`
 
     a {
         color: ${({ theme }) => theme.colors.white};
+        text-decoration: none;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 `;

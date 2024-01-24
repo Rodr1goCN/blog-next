@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     * {
          outline: none;
          margin: 0;
@@ -18,15 +18,4 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%; /* Para poder usar o REM, então 1.5rem é igual 15px */
   }
-
-  a {
-    color: ${({ theme }) => theme.colors.secondary};
-    text-decoration: none;
-    transition: opacity 300ms ease-in-out;
-    &:hover{
-        opacity: .5;
-    }
-  }
 `;
-
-export default GlobalStyle;
