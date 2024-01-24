@@ -12,7 +12,10 @@ export default function Home({ posts }: HompeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const posts = await getAllPosts();
+    // asc -> crescente // desc -> descrecente
+    const posts = await getAllPosts(
+        'sort=id:desc&pagination[start]=0&pagination[limit]=10',
+    );
 
     return {
         props: { posts },
