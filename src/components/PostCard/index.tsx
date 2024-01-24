@@ -11,12 +11,12 @@ export const PostCard = ({ slug, title, cover }: PostCartProps) => {
     return (
         <Container>
             <PostCardCover>
-                <Link href="/post/[slug]" as={`/post/${slug}`}>
+                <Link href="/api/posts-p/[slug]" as={`/api/posts-p/${slug}`}>
                     <img src={cover} alt={title} />
                 </Link>
             </PostCardCover>
             <PostCardHeading>
-                <Link href="/post/" as={`/post/${slug}`}>
+                <Link href="/api/posts-p/" as={`/api/posts-p/${slug}`}>
                     {title}
                 </Link>
             </PostCardHeading>
