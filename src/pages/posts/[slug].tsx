@@ -1,12 +1,18 @@
 import { countAllPosts } from '@/src/data/posts/count-all-posts';
 import { getAllPosts } from '@/src/data/posts/get-all-posts';
+import { getPost } from '@/src/data/posts/get-post';
+import { PostData } from '@/src/domain/posts/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-const FeitoComCarinho = () => {
-    return <p>Feito com carinho por Rodrigo</p>;
+export type DynamicPostProps = {
+    post: PostData;
 };
 
-export default FeitoComCarinho;
+const DynamicPost = ({ post }: DynamicPostProps) => {
+    return <p>{post.attributes.title}</p>;
+};
+
+export default DynamicPost;
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const numberOfPosts = await countAllPosts();
@@ -24,11 +30,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-    // asc -> crescente // desc -> descrecente
-    const posts = await getAllPosts(
-        'sort=id:desc&pagination[start]=0&pagination[limit]=10',
-    );
+export const getStaticProps: GetStaticProps = async (ctx) => {
+    const posts = await getPost(ctx.params?.slug);
 
     return {
         props: { posts },
