@@ -14,11 +14,9 @@ export default function Home({ posts }: HompeProps) {
 export const getStaticProps: GetStaticProps = async () => {
     // asc -> crescente // desc -> descrecente
     const posts = await getAllPosts(
-        'sort=id:desc&pagination[start]=0&pagination[limit]=10',
+        'sort=id:desc&pagination[start]=0&pagination[limit]=9',
     );
-
     return {
         props: { posts },
-        //revalidate: 5,
     };
 };
