@@ -5,8 +5,6 @@ import { PostData } from '../domain/posts/post';
 
 export type HomeProps = {
     posts: PostData[];
-    name: string;
-    stargazers_count: number;
 };
 
 export default function Home({ posts }: HomeProps) {
