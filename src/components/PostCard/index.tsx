@@ -8,15 +8,17 @@ export type PostCartProps = {
 };
 
 export const PostCard = ({ slug, title, cover }: PostCartProps) => {
+    const postHref = `/api/posts-p/[slug]`;
+    const postAs = `/api/posts-p/${slug}`;
     return (
         <Container>
             <PostCardCover>
-                <Link href="/api/posts-p/[slug]" as={`/api/posts-p/${slug}`}>
+                <Link href={postHref} as={postAs}>
                     <img src={cover} alt={title} />
                 </Link>
             </PostCardCover>
             <PostCardHeading>
-                <Link href="/api/posts-p/" as={`/api/posts-p/${slug}`}>
+                <Link href={postHref} as={postAs}>
                     {title}
                 </Link>
             </PostCardHeading>
