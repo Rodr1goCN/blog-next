@@ -11,12 +11,6 @@ export default function Home({ posts }: HomeProps) {
     return <HomePage posts={posts} />;
 }
 
-/* export default function Home({
-    posts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-    return <HomePage posts={posts} />;
-} */
-
 export const getStaticProps: GetStaticProps = async () => {
     // asc -> crescente // desc -> descrecente
     const posts = await getAllPosts(
