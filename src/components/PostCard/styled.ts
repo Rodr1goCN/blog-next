@@ -19,6 +19,7 @@ export const PostCardCover = styled.div`
     img {
         width: 100%;
         display: block;
+        border-radius: 3%;
     }
 `;
 
