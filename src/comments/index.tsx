@@ -1,3 +1,4 @@
+import { SITE_URL } from '../config/app-config';
 import { Container } from './styled';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -12,7 +13,7 @@ export const Comments = ({ slug, title }: CommentsProps) => {
             <DiscussionEmbed
                 shortname="meublog-20"
                 config={{
-                    url: `http://vcap.me:3000/post/${slug}`,
+                    url: `${SITE_URL}/post/${slug}`,
                     identifier: slug,
                     title: title,
                     language: 'pt_BR',
