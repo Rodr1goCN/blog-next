@@ -6,6 +6,7 @@ import { MainContainer } from '@/src/components/MainContainer';
 import { PostCover } from '@/src/components/PostCover';
 import { PostDetails } from '@/src/components/PostDetails';
 import { PostData } from '@/src/domain/posts/post';
+import { Comments } from '@/src/comments';
 
 export type PostProps = {
     post: PostData;
@@ -30,6 +31,7 @@ export const Post = ({ post }: PostProps) => {
                 <div>
                     <PostContainer content={post.content} />
                 </div>
+                <Comments title={post.title} slug={post.slug} />
             </MainContainer>
 
             <Footer />
