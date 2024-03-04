@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Date } from '../Date';
 import { Container } from './styled';
 
@@ -11,7 +12,9 @@ export const PostDetails = ({ date, author, category }: PostDetailsProps) => {
     return (
         <Container>
             Publicado em <Date date={date} /> por {author} | categoria:{' '}
-            {category}
+            <Link href={`/categories/${category.toLowerCase()}`}>
+                {category}
+            </Link>
         </Container>
     );
 };

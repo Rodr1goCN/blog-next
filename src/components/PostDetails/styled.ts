@@ -7,4 +7,13 @@ export const Container = styled.div`
         margin: ${theme.spacings.small} 0;
         font-style: italic;
     `}
+
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.gray};
+    }
+
+    a:hover {
+        color: ${({ theme }) => theme.colors.darkGray};
+    }
 `;
