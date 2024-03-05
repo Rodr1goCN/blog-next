@@ -8,12 +8,14 @@
         "start": "next start",
         "lint": "next lint",
         "debug": "NODE_OPTIONS='--inspect' next dev",
-        "deploy:static": "next build"
+        "deploy:static": "next build",
+        "postbuild": "next-on-netlify"
     },
     "dependencies": {
         "debug": "^4.3.4",
         "disqus-react": "^1.1.5",
         "next": "^14.1.0",
+        "next-on-netlify": "^3.0.1",
         "react": "^18",
         "react-dom": "^18",
         "react-markdown": "^9.0.1",
