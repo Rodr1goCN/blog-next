@@ -6,7 +6,7 @@ import { MainContainer } from '@/src/components/MainContainer';
 import { PostCover } from '@/src/components/PostCover';
 import { PostDetails } from '@/src/components/PostDetails';
 import { PostData } from '@/src/domain/posts/post';
-import { Comments } from '@/src/comments';
+import { Comments } from '@/src/components/comments';
 import Head from 'next/head';
 import { SITE_NAME } from '@/src/config/app-config';
 import { removeHtml } from '@/src/utils/remove-html';

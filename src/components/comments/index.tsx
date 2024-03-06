@@ -1,4 +1,4 @@
-import { SITE_URL } from '../config/app-config';
+import { SITE_URL } from '../../config/app-config';
 import { Container } from './styled';
 import { DiscussionEmbed } from 'disqus-react';
 
