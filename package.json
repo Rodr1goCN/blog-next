@@ -8,8 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "debug": "NODE_OPTIONS='--inspect' next dev",
-        "deploy:static": "next build",
-        "postbuild": "next-on-netlify"
+        "deploy:static": "next build"
     },
     "dependencies": {
         "debug": "^4.3.4",
