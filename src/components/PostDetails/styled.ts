@@ -10,10 +10,11 @@ export const Container = styled.div`
 
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.gray};
+        color: #000000;
     }
 
     a:hover {
-        color: ${({ theme }) => theme.colors.darkGray};
+        color: #183ced;
+        text-decoration: underline dotted #000000;
     }
 `;
