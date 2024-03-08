@@ -1,14 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { Heading } from '.';
-import { theme } from '../../style/theme';
-import { ThemeProvider } from 'styled-components';
+import { customRender } from '../../utils/custom-render';
 
 describe('<Heading />', () => {
     it('Should render a heading', () => {
-        render(
-            <ThemeProvider theme={theme}>
-                <Heading>ola</Heading>
-            </ThemeProvider>,
-        );
+        customRender(<Heading>ola</Heading>);
+        const element = screen.getByRole('heading', { name: /OLA/i });
+        expect(element).toHaveStyleRule('font-size', '5rem');
     });
 });

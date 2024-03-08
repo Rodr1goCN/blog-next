@@ -32,7 +32,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/style/styled-components.d.ts",
+    "types/styled-components.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
