@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { PaginationData } from '@/src/domain/posts/pagination';
 import { Container, NextLink, PreviousLink } from './styled';
 import Link from 'next/link';
