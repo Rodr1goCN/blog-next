@@ -1,19 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = styled.footer`
-    ${({ theme }) => css`
-        text-align: center;
-        margin: ${theme.spacings.medium};
-        color: ${theme.colors.gray};
-        font-size: ${theme.font.sizes.small};
-    `}
-    a {
-        text-decoration: none;
-        color: #000000;
-    }
-
-    a:hover {
-        color: #183ced;
-        text-decoration: underline dotted #000000;
-    }
+export const Container = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: ${({ theme }) => theme.spacings.large} 0;
+`;
+export const PreviousLink = styled.div``;
+export const NextLink = styled.div`
+    margin-left: auto;
 `;
