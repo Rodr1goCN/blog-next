@@ -1,5 +1,5 @@
 import { PaginationData } from '@/src/domain/posts/pagination';
-import { Container, NextLink, PreviousLink } from './styled';
+import { Container, NextLink, PreviousLink, StyledLink } from './styled';
 import Link from 'next/link';
 
 export type PaginationProps = PaginationData;
@@ -24,12 +24,16 @@ export const Pagination = ({
         <Container>
             {hasPreviousPage && (
                 <PreviousLink>
-                    <Link href={previousLink}>Anterior</Link>
+                    <Link href={previousLink}>
+                        <StyledLink>Anterior</StyledLink>
+                    </Link>
                 </PreviousLink>
             )}
             {hasNextPage && (
                 <NextLink>
-                    <Link href={nextLink}>Próximo</Link>
+                    <Link href={nextLink}>
+                        <StyledLink>Próximo</StyledLink>
+                    </Link>
                 </NextLink>
             )}
         </Container>
