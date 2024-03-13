@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         : 1;
     // diz qual categoria esta
     const category = context.params?.param?.[1] || '';
-    const postsPerPage = 3;
+    const postsPerPage = 6;
     const startFrom = (page - 1) * postsPerPage;
 
     const nextPage = page + 1;

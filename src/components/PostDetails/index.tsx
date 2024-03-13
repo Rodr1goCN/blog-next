@@ -12,7 +12,7 @@ export const PostDetails = ({ date, author, category }: PostDetailsProps) => {
     return (
         <Container>
             Publicado em <Date date={date} /> por {author} | categoria:{' '}
-            <Link href={`/categories/${category.toLowerCase()}`}>
+            <Link href={`/posts/page/1/${category.toLowerCase()}`}>
                 {category}
             </Link>
         </Container>

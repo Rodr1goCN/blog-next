@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { PostData } from '@/src/domain/posts/post';
-import { Category, Container } from './style';
+import { AllPostsLinks, Category, Container } from './style';
 import { Header } from '@/src/components/Header';
 import { MainContainer } from '@/src/components/MainContainer';
 import { PostCard } from '@/src/components/PostCard';
@@ -8,6 +8,7 @@ import { Footer } from '@/src/components/Footer';
 import { SITE_NAME } from '@/src/config/app-config';
 import { PaginationData } from '@/src/domain/posts/pagination';
 import { Pagination } from '@/src/components/Pagination';
+import Link from 'next/link';
 
 export type HomePageProps = {
     posts: PostData[];
@@ -24,7 +25,11 @@ export default function HomePage({
         <>
             <Head>
                 <title>
-                    {category ? `${category} - ${SITE_NAME}` : SITE_NAME}
+                    {category
+                        ? `${category.toString()} - ${SITE_NAME}`
+                        : SITE_NAME}{' '}
+                    {pagination?.nextPage &&
+                        ` - Página ${(pagination.nextPage - 1).toString()}`}
                 </title>
                 <meta
                     name="description"
@@ -45,6 +50,11 @@ export default function HomePage({
                     ))}
                 </Container>
                 <Pagination {...pagination} />
+                {!pagination?.nextPage && (
+                    <Link href="/posts/page/[...param]" as="/posts/page/1">
+                        <AllPostsLinks>Ver todos posts</AllPostsLinks>
+                    </Link>
+                )}
             </MainContainer>
             <Footer />
         </>
