@@ -17,7 +17,7 @@ export const AllPostsLinks = styled.a`
     display: block;
     text-align: center;
     margin: ${({ theme }) => theme.spacings.large} 0;
-    text-decoration: underline #005b96;
+    /* text-decoration: underline #005b96;
     transition: color 0.3s ease;
     &:hover {
         color: ${({ theme }) => theme.colors.gray};
@@ -26,5 +26,5 @@ export const AllPostsLinks = styled.a`
     background-color: ${({ theme }) => theme.colors.secondary};
     color: ${({ theme }) => theme.colors.white};
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 4px; */
 `;

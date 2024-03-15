@@ -16,7 +16,7 @@ export const StyledLink = styled.a`
     display: block;
     text-align: center;
     margin: ${({ theme }) => theme.spacings.large} 0;
-    text-decoration: underline #005b96 !important;
+    text-decoration: underline #005b96;
     transition: color 0.3s ease;
     &:hover {
         color: ${({ theme }) => theme.colors.gray};

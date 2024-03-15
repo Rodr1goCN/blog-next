@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { PostData } from '@/src/domain/posts/post';
-import { AllPostsLinks, Category, Container } from './style';
+import { Category, Container } from './styles';
 import { Header } from '@/src/components/Header';
 import { MainContainer } from '@/src/components/MainContainer';
 import { PostCard } from '@/src/components/PostCard';
@@ -25,11 +25,9 @@ export default function HomePage({
         <>
             <Head>
                 <title>
-                    {category
-                        ? `${category.toString()} - ${SITE_NAME}`
-                        : SITE_NAME}{' '}
+                    {category ? `${category} - ${SITE_NAME}` : SITE_NAME}{' '}
                     {pagination?.nextPage &&
-                        ` - Página ${(pagination.nextPage - 1).toString()}`}
+                        ` - Página ${pagination.nextPage - 1}`}
                 </title>
                 <meta
                     name="description"
@@ -51,8 +49,12 @@ export default function HomePage({
                 </Container>
                 <Pagination {...pagination} />
                 {!pagination?.nextPage && (
-                    <Link href="/posts/page/[...param]" as="/posts/page/1">
-                        <AllPostsLinks>Ver todos posts</AllPostsLinks>
+                    <Link
+                        href="/posts/page/[...param]"
+                        as="/posts/page/1"
+                        className="StyledLink"
+                    >
+                        Ver todos posts
                     </Link>
                 )}
             </MainContainer>
