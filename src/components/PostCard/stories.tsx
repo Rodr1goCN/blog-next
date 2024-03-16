@@ -1,4 +1,4 @@
-import {StoryFn, Meta} from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react';
 import { PostCard, PostCardProps } from '.';
 
 export default {
@@ -11,25 +11,25 @@ export default {
     },
 } as Meta;
 
-export const PrimaryCover: StoryFn<PostCardProps> = (args) =>(
-<div style={{maxWidth: '36rem'}}>
-<PostCard {...args}/>
-</div>
+export const PrimaryCover: StoryFn<PostCardProps> = (args) => (
+    <div style={{ maxWidth: '36rem' }}>
+        <PostCard {...args} />
+    </div>
 );
 
-export const SecondaryCover: StoryFn<PostCardProps> = (args) =>(
-<div style={{maxWidth: '36rem'}}>
-<PostCard {...args}/>
-</div>
+export const SecondaryCover: StoryFn<PostCardProps> = (args) => (
+    <div style={{ maxWidth: '36rem' }}>
+        <PostCard {...args} />
+    </div>
 );
 
 SecondaryCover.args = {
     cover: '/images/linux.jpg',
     slug: 'default-slug',
-    title: 'default-title'
-}
+    title: 'default-title',
+};
 PrimaryCover.args = {
     cover: '/images/windows10.jpg',
     slug: 'default-slug',
-    title: 'default-title'
-}
+    title: 'default-title',
+};
