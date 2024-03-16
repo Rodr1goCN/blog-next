@@ -4,7 +4,7 @@ import { PostCard, PostCardProps } from '.';
 export default {
     title: 'PostCard',
     component: PostCard,
-    arg: {
+    args: {
         slug: 'default-slug',
         title: 'default-title',
         cover: '/images/windows10.jpg',

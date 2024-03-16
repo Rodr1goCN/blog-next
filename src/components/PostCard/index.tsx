@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { Container, PostCardCover, PostCardHeading } from './styled';
 
-export type PostCartProps = {
+export type PostCardProps = {
     slug: string;
     title: string;
     cover: string;
 };
 
-export const PostCard = ({ slug, title, cover }: PostCartProps) => {
+export const PostCard = ({ slug, title, cover }: PostCardProps) => {
     const postHref = `/posts/[slug]`;
     const postAs = `/posts/${slug}`;
     return (
